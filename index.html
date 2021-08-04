@@ -1,0 +1,178 @@
+<html>
+<head>
+  <title>Resume</title>
+  <meta charset="UTF-8"><!--[if IE]><![endif]-->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Hey, I'm Hetul Parmar",
+      jobStatus: "Fresher",
+      twitterURL: 'https://twitter.com/HetulParmar14',
+      instaURL: 'https://www.instagram.com/Parmar Hetul/',
+      githubURL: 'https://github.com/ParmarHetul21',
+      linkedinURL: 'https://www.linkedin.com/in/hetul-parmar-590462203/',
+      resumeURL: './resume.pdf'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              twitterURL={this.props.profileData.twitterURL}
+              instaURL={this.props.profileData.instaURL}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href={this.props.twitterURL} target="_blank"><i className="fa fa-twitter"></i></a>
+                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I&#39;m currently in my third semester studying Master in Computer Application at GLS University.</p>
+                  <span className="intro-p job-pls">I&#39;m currently looking for my internship</span>
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>JavaScript , HTML5, CSS3, Java, Python,</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>Bootstrap, Android, Django, React</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>Git &amp; Github, Command Line, R-Studio, Android-Studio, XAMPP, Anaconda</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="education">
+                <h4>Education</h4>
+                
+                <div className="content">
+                  <div className="university"><a href="https://www.glsuniversity.ac.in/" target="_blank">GLS University</a></div>
+                  <div className="college"><a href="https://www.glsuniversity.ac.in/mca.html" target="_blank">Master Of Computer Application</a></div>
+                  <div className="major"><strong>Percentage</strong> 81% </div>
+                  <div className="grad-date">Expected Graduation: March 2022</div>
+                </div>
+              </div>
+              
+              <div className="education">
+                <h4></h4>
+                <div className="content">
+                  <div className="university"><a href="https://www.saurashtrauniversity.edu/" target="_blank">Saurashtra University</a></div>
+                  <div className="college"><a href="https://czmgbca.oshwaleducationtrust.org/Home.aspx" target="_blank">Bachelor Of Computer Application</a></div>
+                  <div className="major"><strong>Percentage</strong> 82.86% </div>
+                </div>
+              </div>
+
+              <div className="education">
+                <h4></h4>
+                <div className="content">
+                  <div className="university"><a href="https://www.gseb.org/" target="_blank">G.S.E.B</a></div>
+                  <div className="college"><a href="https://hariaschool.edu.in/" target="_blank">H. S. C.</a></div>
+                  <div className="major"><strong>Percentage</strong> 63.28% </div>
+                </div>
+              </div>
+
+              <div className="education">
+                <h4></h4>
+                <div className="content">
+                  <div className="university"><a href="https://www.gseb.org/" target="_blank">G.S.E.B</a></div>
+                  <div className="college"><a href="https://hariaschool.edu.in/" target="_blank">S. S. C.</a></div>
+                  <div className="major"><strong>Percentage</strong> 52% </div>
+                </div>
+              </div>
+
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="#" target="_blank">parmarhetul.github.io</a>
+                    <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://parmarhetul21.github.io/typo/" target="_blank">Typo</a>
+                    <p className="project-desc">Typo is an web application built on JavaScript. It will Enhance your Typing speed according to your prefrence.</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://github.com/ParmarHetul21/quizo" target="_blank">Quizo</a>
+                    <p className="project-desc">Its an online quiz application where user can give quiz & Quiz-Creator can upload their quizzes</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://github.com/ParmarHetul21/Expensify" target="_blank">Expensify</a>
+                    <p className="project-desc">Expensify is an android application you can track your expense and also income It is secure because data never leaves from your phone</p>
+                  </div>
+                </div>
+              </div>
+
+              <a className="resume" href='./resume/resume.pdf' target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+  </script>
+</body>
+</html>
